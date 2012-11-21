@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @album.title %>
+</p>
+
+<p>
+  <b>Artist:</b>
+  <%= @album.artist.name %>
+</p>
+
+<p>
+  <b>Release date:</b>
+  <%= @album.release_date %>
+</p>
+
+<p>
+  <b>Genre:</b>
+  <%= @album.genre %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @album.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @album.updated_at %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @album.price %>
+</p>
+
+<p>
+  <b>Image path:</b>
+  <%= @album.image_path %>
+</p>
+
+<p>
+  <b>Features:</b>
+  <% for feature in @album.features %>
+        <%= feature.name + "  " %>
+    <% end %>
+</p>
+
+
+<p>
+  <b>Artist ID:</b>
+  <%= @album.artist_id %>
+</p>
+
+<br />
+<!-- <p><% for ab in @album.features %> <br /> <% %> <% end %></p> -->
+<%= link_to 'Edit', edit_album_path(@album) %> |
+<%= link_to 'Back', albums_path %>

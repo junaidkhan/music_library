@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: 
+  active_years: 
+  created_at: 2012-10-28 23:50:52
+  updated_at: 2012-10-28 23:50:52
+  biography: MyText
+
+two:
+  name: 
+  active_years: 
+  created_at: 2012-10-28 23:50:52
+  updated_at: 2012-10-28 23:50:52
+  biography: MyText

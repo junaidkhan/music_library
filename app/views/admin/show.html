@@ -1,0 +1,15 @@
+
+		
+		
+		<p><b>ID:<%= @albums.id %> <br /> 
+			Title: <%= @albums.title %> <br /> 
+			Release Date: <%= @albums.release_date %> <br /> 
+			OLD Artist:<%= @albums.artist_old %><br /> 
+			NEW Artist:<%= @albums.artist.name %><br /> 
+			All albums <% for album in @albums.artist.albums %>
+						<%= album.title%><br />	
+						<% end %>
+			Genre:<%= @albums.genre %>
+		</b></p>
+		<p><%= link_to('update', :action => 'edit', :id => @albums.id)%></p>
+		<p><%= link_to('Delete this row', {:action => 'delete', :id => @albums.id}, :confirm => 'Are you sure, you wana delete this row')%></p>

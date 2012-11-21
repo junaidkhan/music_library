@@ -1,0 +1,35 @@
+<h1>Music library store</h1>
+
+<table  style="width: 700px;  border-collapse: collapse;">
+	<% for album in @albums%>
+	<% row = cycle("ccc", "eee")%>
+	<tr style="background: #<%= row%>;">
+		<td rowspan="2">
+			<%= image_tag(album.image_path, :size => '90x90')%>
+		</td>
+		<td style="font-size: 14px; font-weight:bold;">
+			<%= h album.title%>
+		<td style="font-size: 12px; font-weight:bold;">
+			<%= h album.artist.name if album.artist %>
+		</td>
+		<td style="font-size: 12px;">
+			<%= number_to_currency(album.price) %>
+		</td>
+	</tr>
+
+	<tr style="font-size: 12px; background: #<%= row%>;">
+		<td>
+			Released: <%= album.release_date.strftime("%Y") %>
+		</td>
+		<td>
+			Genre: <%= h album.genre %>
+		</td>
+		<td>
+			Add to Cart: <%= link_to('Add TO Cart', :action => 'add_to_cart', :id => album.id)%>
+		</td>
+	</tr>
+
+	<% end %>
+
+</table>
+<p>The time is <%= Time.now.strftime("%I:%M %p on %A %B %d %Y")%></p>

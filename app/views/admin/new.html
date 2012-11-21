@@ -1,0 +1,9 @@
+
+		
+		<%= form_tag(:action => 'create') do%><br />
+		Title: <%= text_field(:album, :title)%><br />
+		Artist: <%= text_field(:album, :artist)%><br />
+		Genre: <%= text_field(:album, :genre)%><br />
+		Release_date: <%= datetime_select(:album, :release_date)%><br />
+		<%= submit_tag("create")%><br /><br />
+		<% end %>

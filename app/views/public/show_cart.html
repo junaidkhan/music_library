@@ -1,0 +1,45 @@
+<h1>Music library store</h1>
+<h2>YOur Sh00ping Cart</h2>
+
+<table  style="width: 700px;  border-collapse: collapse;">
+	<tr>
+		<td>&nbsp;</td> 
+		<td>Album</td>
+		<td>Artist</td>
+		<td>Quantity</td>
+		<td>Price</td>
+	</tr>
+
+	<% for item in @cart.items%>
+	<% row = cycle("ccc", "eee")%>
+	<tr style="background: #<%= row%>;">
+		<td>
+			<%= image_tag(item.album.image_path, :size => '18x18')%>
+		</td>
+		<td style="font-size: 14px; font-weight:bold;">
+			<%= h item.album.title%>
+		<td style="font-size: 12px; font-weight:bold;">
+			<%= h item.album.artist.name if item.album.artist %>
+		</td>
+		<td style="font-size: 12px;">
+			<%= item.quantity %>
+		</td>
+		<td style="font-size: 12px;">
+			<%= number_to_currency(item.price) %>
+		</td>
+		<td style="font-size: 12px;">
+			<%= link_to('Remove Item', :action => 'remove_item', :id => item.album.id) %>
+		</td>
+	</tr>
+
+	<% end %>
+	<tr>
+		<td>&nbsp;</td> 
+		<td>Total</td>
+		<td>&nbsp;</td> 
+		<td>&nbsp;</td> 
+		<td><%= number_to_currency(@cart.total_price) %></td>
+	</tr>
+</table>
+<p><%= link_to('Continue Shoping' , :action => 'list')%> | <%= link_to('Empty Cart' , {:action => 'empty_cart'}, :confirm => 'Are you sure?')%> | <%= link_to('Check Out' , :action => 'check_out')%></p>
+<p>The time is <%= Time.now.strftime("%I:%M %p on %A %B %d %Y")%></p>

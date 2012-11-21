@@ -1,0 +1,4 @@
+<% for order in @order.line_items%>
+<%= order.id%> <%= order.album_id%> <%= order.order_id%> <%= order.price%> <br />
+
+<% end %>

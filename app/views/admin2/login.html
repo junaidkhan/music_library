@@ -1,0 +1,9 @@
+<h1>Admin Area login</h1>
+
+<%= form_for @user, :url => { :action => "send_login" }, :html => {:class => "nifty_form"} do |f| %>
+
+
+ UserName  :<%= f.text_field :name %><br /><br />
+ Password   : <%= f.text_field :password %><br /><br />
+  <%= f.submit "login" %>
+<% end %>

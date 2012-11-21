@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  created_at: 2012-10-29 20:42:11
+  updated_at: 2012-10-29 20:42:11
+  invoice_number: 
+
+two:
+  created_at: 2012-10-29 20:42:11
+  updated_at: 2012-10-29 20:42:11
+  invoice_number: 

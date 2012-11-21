@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: 
+  release_date: 2012-10-29 02:16:04
+  genre: 
+  created_at: 2012-10-29 02:16:04
+  updated_at: 2012-10-29 02:16:04
+  feature: 
+  image_path: 
+  artist_id: 
+
+two:
+  title: 
+  release_date: 2012-10-29 02:16:04
+  genre: 
+  created_at: 2012-10-29 02:16:04
+  updated_at: 2012-10-29 02:16:04
+  feature: 
+  image_path: 
+  artist_id: 

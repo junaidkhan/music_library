@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>add</title>
+	</head>
+	<body>
+		
+		<%= start_form_tag(:action => 'create')%><br />
+		<%= text_field(:album, :title)%><br />
+		<%= text_field(:album, :artist)%><br />
+		<%= text_field(:album, :genra)%><br />
+		<%= datetime_select(:album, :release_date)%><br />
+		<%= submit_tag("create")%><br />
+		<%= end_form_tag%>
+		
+		
+		
+		
+	</body>
+</html>

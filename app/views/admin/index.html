@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<title>data</title>
+	</head>
+	<body>
+		<% for album in @albums %>
+		<p><%= link_to(album.title, :action => 'show', :id => album.id)%> 
+
+			-- <%= album.artist_old%></p>
+		<%end %>
+		<p><%= link_to('Add a new record', :action => 'new')%></p>
+	</body>
+</html>
